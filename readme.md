@@ -28,3 +28,22 @@ stock_prices = {
     'TSLA': [750.00, 760.50, 755.25, 745.80, 752.90]
 }
 ```
+
+### Pacakges to install
+
+```
+pandas 
+numpy 
+matplotlib 
+seaborn 
+xlwings 
+scikit-learn 
+tensorflow 
+boto3 
+requests 
+venv 
+Flask 
+dash 
+langchain 
+transformers
+```
