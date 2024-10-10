@@ -47,3 +47,26 @@ dash
 langchain 
 transformers
 ```
+
+### Html support
+
+```
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+
+<!-- form -->
+
+    <h1>Add Stock</h1>
+    <form action="/add">
+        <label for="symbol">Stock Symbol:</label>
+        <input type="text" id="symbol" name="symbol" required><br><br>
+        
+        <label for="name">Stock Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="currency">Currency:</label>
+        <input type="text" id="currency" name="currency" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+```
