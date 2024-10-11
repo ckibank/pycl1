@@ -1,6 +1,8 @@
 from typing import List
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Form
 from pydantic import BaseModel
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
 class StockData(BaseModel):
   symbol: str
@@ -16,10 +18,23 @@ stock_prices = {
 
 app = FastAPI()
 
+templates = Jinja2Templates(directory="templates")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 @app.get("/")
-def index():
-    return {"status": "ok", "about": "FastAPI endpoint"}
+def index(request: Request):
+  return templates.TemplateResponse("stock_form.html", {"request": request})
+  # return {"status": "ok", "about": "FastAPI endpoint"}
+  
+@app.post("/add")
+def stock_add(symbol: str = Form(...), name: str=Form(...), currencyd: str=Form(...)):
+  return {
+    "symbol": symbol,
+    "name": name,
+    "currency": currencyd
+  }
 
 # create a route allprices to show all the stock_prices
 @app.get("/price/{stocksymbol}")

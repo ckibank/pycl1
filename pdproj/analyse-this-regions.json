@@ -1,0 +1,23 @@
+{
+  {
+    "DeskId": 1,
+    "City": "London",
+    "Code": "UK",
+    "Commission": "3%",
+    "Increase over General Cost": "10,000.00"
+  },
+  {
+    "DeskId": 2,
+    "City": "Paris",
+    "Code": "FR",
+    "Commission": "4%",
+    "Increase over General Cost": "-"
+  },
+  {
+    "DeskId": 3,
+    "City": "Frankfurt",
+    "Code": "GR",
+    "Commission": "5%",
+    "Increase over General Cost": "15,000.00"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+
+  <title>Add Stock details</title>
+</head>
+<body>
+  <h1>Add Stock</h1>
+  <form action="/add", method="post">
+    <label for="symbol">Stock Symbol:</label>
+    <input type="text" id="symbol" name="symbol" required><br><br>
+    
+    <label for="name">Stock Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="currency">Currency:</label>
+    <select name="currencyd">
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+    </select>
+    <!-- <input type="text" id="currency" name="currencyd" required><br><br> -->
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
